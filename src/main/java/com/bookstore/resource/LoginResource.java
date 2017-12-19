@@ -19,8 +19,8 @@ import com.bookstore.service.UserService;
 @RestController
 public class LoginResource {
 	
-	@Autowired
-	private UserService userService;
+//	@Autowired
+//	private UserService userService;
 	
 	@RequestMapping("/token")
 	public Map<String, String> token(HttpSession session, HttpServletRequest request){
@@ -43,7 +43,7 @@ public class LoginResource {
 	@RequestMapping(value="/user/logout", method=RequestMethod.POST)
 	public ResponseEntity logout(){
 		SecurityContextHolder.clearContext();
-		return new ResponseEntity("LoggedOut Successfully!", HttpStatus.OK);
+		return new ResponseEntity("Loggedout Successfully!", HttpStatus.OK);
 
 	}
 
